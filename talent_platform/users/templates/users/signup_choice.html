@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <div class="card shadow-sm p-5">
+        <div class="card-body">
+          <h2 class="card-title mb-4">Join as a...</h2>
+          <a href="{% url 'candidate_signup' %}" class="btn btn-primary btn-lg m-2 px-5">Candidate</a>
+          <a href="{% url 'recruiter_signup' %}" class="btn btn-outline-primary btn-lg m-2 px-5">Recruiter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

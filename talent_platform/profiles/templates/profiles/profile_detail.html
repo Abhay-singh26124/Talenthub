@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-9">
+    <div class="card shadow-sm">
+      <div class="card-body p-5">
+        
+        <h2 class="card-title">{{ profile.user.username }}'s Profile</h2>
+        <h6 class="card-subtitle mb-3 text-muted">
+          Applicant for your job
+        </h6>
+        
+        <hr class="my-4">
+        
+        <h4>Bio</h4>
+        {% if profile.bio %}
+          <p>{{ profile.bio|linebreaksbr }}</p>
+        {% else %}
+          <p class="text-muted"><em>No bio provided.</em></p>
+        {% endif %}
+        
+        <h4 class="mt-4">Skills</h4>
+        {% if profile.skills %}
+          <p>
+            {{ profile.skills }}
+          </p>
+        {% else %}
+          <p class="text-muted"><em>No skills listed.</em></p>
+        {% endif %}
+
+        <hr class="my-4">
+        <a href="javascript:history.back()" class="btn btn-outline-secondary">Go Back</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

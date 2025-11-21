@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="mb-4">Available Job Listings</h2>
+  
+  <div class="row">
+    {% for job in jobs %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm"> 
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ job.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ job.location }}</h6>
+            <p class="card-text text-truncate">{{ job.description }}</p>
+            
+            <div class="mt-auto">
+              <a href="{% url 'job_detail' job.pk %}" class="btn btn-primary">View Details</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="col">
+        <div class="alert alert-info" role="alert">
+          No jobs have been posted yet.
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+{% endblock %}

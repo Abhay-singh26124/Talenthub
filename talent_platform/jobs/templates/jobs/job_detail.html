@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-9">
+    <div class="card shadow-sm">
+      <div class="card-body p-5">
+        
+        <h2 class="card-title">{{ job.title }}</h2> 
+        <h6 class="card-subtitle mb-3 text-muted">
+          Posted by: {{ job.posted_by.username }} | Location: {{ job.location }}
+        </h6>
+        <hr class="my-4">
+        <h4>Description</h4>
+        <p>{{ job.description|linebreaksbr }}</p>
+        
+        <h4 class="mt-4">Requirements</h4> 
+        <p>{{ job.requirements|linebreaksbr }}</p>
+        <hr class="my-4">
+
+        <div class="text-center">
+          {% if user.is_authenticated and user.role == 'CANDIDATE' %}
+              
+            {% if has_applied %}
+              <div class="alert alert-success" role="alert">
+                <strong>You have already applied for this job.</strong>
+                <br>
+                <a href="{% url 'dashboard' %}" class="alert-link">View your applications</a>
+              </div>
+            {% else %}
+              <a href="{% url 'apply_for_job' job.id %}" class="btn btn-primary btn-lg px-5">Apply Now</a>
+            {% endif %}
+
+          {% elif user.is_authenticated and user.role == 'RECRUITER' %}
+            
+            {% if is_owner %} 
+              <p class="text-muted"><em>You are the owner of this job posting.</em></p>
+              
+              <a href="{% url 'job_edit' job.pk %}" class="btn btn-primary">Edit Job</a>
+              
+              <a href="{% url 'job_delete' job.pk %}" class="btn btn-outline-danger ms-2">Delete Job Posting</a>
+
+            {% else %}
+               <p class="text-muted"><em>You are logged in as a Recruiter, but not the owner of this post.</em></p>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
