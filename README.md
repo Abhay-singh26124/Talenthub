@@ -1,4 +1,5 @@
-TalentHub
+TalentHub:
+
 A full-stack web application designed to streamline the recruitment process by connecting job seekers with hiring agents. 
 Recruiters can post opportunities and manage applicants, while candidates can browse jobs and track their application status in real-time. 
 Built with Django and focused on a secure, role-based user experience.
