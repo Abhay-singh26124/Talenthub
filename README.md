@@ -1,23 +1,78 @@
-TalentHub:
+🚀 TalentHub – Full-Stack Recruitment Management System
 
-A full-stack web application designed to streamline the recruitment process by connecting job seekers with hiring agents. 
-Recruiters can post opportunities and manage applicants, while candidates can browse jobs and track their application status in real-time. 
-Built with Django and focused on a secure, role-based user experience.
+TalentHub is a full-stack web application built to streamline hiring by connecting job seekers with recruiters.
+Recruiters can create job opportunities and manage applicants, while candidates can browse openings, apply instantly, and track their application status in real-time.
 
+Built using Django, with a strong focus on role-based access, secure authentication, and a clean, responsive UI.
 
-🚀 Features
-🔐 Authentication: Secure dual-role registration and login (Candidate & Recruiter) 
-🏢 Recruiter Dashboard: Post, edit, and delete job listings and view received applications 
-👨‍💻 Candidate Dashboard: Browse opportunities, apply with one click, and track status 
-📝 Job Management: Full CRUD functionality for job postings with ownership protection
-📊 Status Tracking: Real-time application updates (e.g., Applied → Under Review → Hired) 
-🛡️ Role-Based Security: Custom decorators and RBAC to ensure isolated workflows 
-🎨 Responsive UI: Clean, mobile-friendly interface built with Bootstrap 5
+✨ Key Features
+🔐 Dual-Role Authentication
 
+Secure registration & login for Candidates and Recruiters
 
-🛠 Tech Stack
-Frontend: HTML5, CSS3, JavaScript, Bootstrap 5 
-Backend: Python, Django Framework 
-Database: SQLite (Django default) 
-Templating: Django Template Language (DTL) 
-Forms: Django Crispy Forms
+Role-based UI and dashboard separation
+
+Ownership-based access protection
+
+🏢 Recruiter Dashboard
+
+Create, edit, and delete job postings
+
+View and manage all received applications
+
+Full control over job listings
+
+🧑‍💼 Candidate Dashboard
+
+Browse job opportunities
+
+One-click apply
+
+Track application status in real time
+
+View applied jobs history
+
+📌 Job Management
+
+Full CRUD for job postings
+
+Ownership protection ensures only job creators can modify listings
+
+📊 Real-Time Status Tracking
+
+Application statuses update in a clear workflow:
+Applied → Under Review → Shortlisted → Hired
+
+🛡️ Role-Based Security (RBAC)
+
+Custom Django decorators for secured routes
+
+Ensures Recruiters and Candidates access only their permitted areas
+
+💻 Responsive UI
+
+Built with Bootstrap 5
+
+Mobile-friendly and clean layout
+
+Smooth form handling using Django Crispy Forms
+
+🧰 Tech Stack
+
+Frontend:
+
+HTML5, CSS3, JavaScript
+
+Bootstrap 5
+
+Backend:
+
+Django Framework (Python)
+
+Django Template Language (DTL)
+
+Django Crispy Forms
+
+Database:
+
+SQLite (default, easily configurable to PostgreSQL)
