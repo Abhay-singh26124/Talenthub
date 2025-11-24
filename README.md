@@ -4,6 +4,7 @@ A full-stack web application designed to streamline the recruitment process by c
 Recruiters can post opportunities and manage applicants, while candidates can browse jobs and track their application status in real-time. 
 Built with Django and focused on a secure, role-based user experience.
 
+
 🚀 Features
 🔐 Authentication: Secure dual-role registration and login (Candidate & Recruiter) 
 🏢 Recruiter Dashboard: Post, edit, and delete job listings and view received applications 
@@ -12,6 +13,7 @@ Built with Django and focused on a secure, role-based user experience.
 📊 Status Tracking: Real-time application updates (e.g., Applied → Under Review → Hired) 
 🛡️ Role-Based Security: Custom decorators and RBAC to ensure isolated workflows 
 🎨 Responsive UI: Clean, mobile-friendly interface built with Bootstrap 5
+
 
 🛠 Tech Stack
 Frontend: HTML5, CSS3, JavaScript, Bootstrap 5 
